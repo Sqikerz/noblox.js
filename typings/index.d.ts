@@ -127,6 +127,14 @@ declare module "noblox.js" {
                 refresh: number | boolean;
             },
 
+            /** Ten minute cache for a user object based on their name.*/
+            UserFromName: {
+                /** Default: 600 */
+                expire: number | boolean;
+                /** Default: false */
+                refresh: number | boolean;
+            },
+
             /** Permanent cache for the sender's user ID. This should literally never change. */
             SenderId: {
                 /** Default: true */
