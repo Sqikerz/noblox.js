@@ -98,6 +98,12 @@
 			"desc": "Ten minute cache for a user object based on their name."
 		},
 
+		"PlayerThumbnail": {
+			"expire": 3600,
+			"refresh": false,
+			"desc": "Caches player thumbnails for an hour. This is a good balance between speed and not overloading Roblox's servers."
+		},
+
 		"SenderID": {
 			"expire": true,
 			"refresh": false,
