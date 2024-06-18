@@ -152,7 +152,7 @@ declare module "noblox.js" {
      * pants = 12
      * decals = 13
      */
-    type UploadItemAssetType = 11 | 12 | 13;
+    type UploadItemAssetType = "Model" | "Decal" | "Animation";
 
     interface ProductInfoCreator {
         Id: number;
@@ -736,7 +736,7 @@ declare module "noblox.js" {
         isFavoritedByUser: boolean;
         favoritedCount: number;
     }
-
+            
     interface PlaceInformation {
         placeId: number;
         name: string;
@@ -1670,12 +1670,12 @@ declare module "noblox.js" {
 
     /// DataStores
 
-    /**
-     * ☁️ Marks the entry as deleted by creating a tombstone version. Entries are deleted permanently after 30 days.
+    /** 
+     * ☁️ Marks the entry as deleted by creating a tombstone version. Entries are deleted permanently after 30 days. 
      */
     function deleteDatastoreEntry(universeId: number, datastoreName: string, entryKey: string, scope?: string, jar?: CookieJar): Promise<void>
 
-    /**
+    /** 
      * ☁️ Returns the latest value and metadata associated with an entry, or a specific version if versionId is provided.
      */
     function getDatastoreEntry(universeId: number, datastoreName: string, entryKey: string, scope?: string, versionId?: string, jar?: CookieJar): Promise<DatastoreEntry>
@@ -1821,7 +1821,7 @@ declare module "noblox.js" {
     /// Games
 
     /**
-     * 🔐 Adds a developer product to the specified universe.
+     * 🔐 Adds a developer product to the specified universe. 
      * Warning: The `productId` returned by this function does not match the `productId` used by other endpoints.
      */
     function addDeveloperProduct(universeId: number, name: string, priceInRobux: number, description?: string, jar?: CookieJar): Promise<DeveloperProductAddResult>;
@@ -1871,16 +1871,11 @@ declare module "noblox.js" {
      */
     function getUniverseInfo(universeIds: number[] | number, jar?: CookieJar): Promise<UniverseInformation[]>;
 
-    /**
-    * ☁️ Publish a message to a subscribed topic.
-    */
-    function publishToTopic(universeId: number, topic: string, data: (Object | string), jar?: CookieJar): Promise<boolean>;
-
-    /**
+    /** 
      * 🔐 Returns information about the place(s) in question, such as name, description, etc.
      */
     function getPlaceInfo(placeIds: number[] | number, jar?: CookieJar): Promise<PlaceInformation[]>;
-
+            
     /**
      * 🔐 Update a developer product.
      */
@@ -2271,6 +2266,11 @@ declare module "noblox.js" {
      * ✅ Creates a jar file based on `sessionOnly`. Normally you will not need this argument as the function will use the default from settings.json. If for some other reason you need a jar file you can collect it this way, but without changing the settings it will not work.
      */
     function jar(sessionOnly?: boolean): CookieJar;
+
+    /**
+     * 🔐 ☁️ Handle operations requiring polling.
+     */
+    function pollResult(url: string, jar?: CookieJar): Promise<Object>;
 
     /**
      * 🔐 Refreshes the internally stored cookie, or the cookie provided, stores the new cookie and returns it.

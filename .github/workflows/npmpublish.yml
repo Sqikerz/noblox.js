@@ -1,10 +1,6 @@
 name: Test & Publish
 
 on:
-  pull_request:
-    branches:
-      - master
-
   push:
     branches:
       - master
@@ -32,7 +28,6 @@ jobs:
 
   publish-npm:
     needs: test
-    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code with ADMIN_TOKEN
