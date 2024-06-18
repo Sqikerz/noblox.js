@@ -1,5 +1,5 @@
 {
-  "name": "noblox.js",
+  "name": "@spikers/noblox.js",
   "version": "4.15.1",
   "description": "A Node.js API wrapper for Roblox.",
   "main": "lib/index.js",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/noblox/noblox.js.git"
+    "url": "git+https://github.com/sqikerz/noblox.js.git"
   },
   "keywords": [
     "roblox",
@@ -28,11 +28,9 @@
     "tough-cookie": "^4.1.4"
   },
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/noblox/noblox.js/issues"
-  },
-  "author": "Suufi <suufi@mit.edu> (https://github.com/suufi)",
+  "author": "Spikers",
   "contributors": [
+    "Suufi <suufi@mit.edu> (https://github.com/suufi)",
     "Joshua Lanese <froastj@gmail.com>",
     "Neztore <hi@nezto.re>",
     "Alan Bixby <alan@bxb.gg> (https://alanbix.by)"

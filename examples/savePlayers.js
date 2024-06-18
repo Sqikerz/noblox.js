@@ -33,7 +33,7 @@ function shouldSave (player) {
 }
 
 // Dependencies
-const noblox = require('noblox.js')
+const noblox = require('@spikers/noblox.js')
 const js = require('JSONStream')
 const fs = require('fs')
 

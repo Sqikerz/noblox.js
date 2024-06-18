@@ -30,7 +30,7 @@ function shouldSave (wallPost) {
 }
 
 // Dependencies
-const noblox = require('noblox.js')
+const noblox = require('@spikers/noblox.js')
 const logUpdate = require('log-update')
 const js = require('JSONStream')
 const fs = require('fs')

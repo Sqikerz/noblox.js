@@ -1,7 +1,7 @@
 const chalk = require('chalk')
 const figlet = require('figlet')
 
-console.log(chalk.yellow(figlet.textSync('noblox.js', {
+console.log(chalk.yellow(figlet.textSync('@spikers/noblox.js', {
   font: 'Big',
   horizontalLayout: 'default',
   verticalLayout: 'default'

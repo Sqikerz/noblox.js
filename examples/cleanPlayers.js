@@ -32,7 +32,7 @@ function shouldExile (player) {
 }
 
 // Dependencies
-const noblox = require('noblox.js')
+const noblox = require('@spikers/noblox.js')
 const logUpdate = require('log-update')
 
 const players = {
