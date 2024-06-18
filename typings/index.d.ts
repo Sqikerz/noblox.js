@@ -2159,6 +2159,12 @@ declare module "noblox.js" {
     function getIdFromUsername<T extends string | string[]>(username: T): T extends string ? Promise<number> : Promise<number[]>;
 
     /**
+     * ✅ Get a user's object from their username and caches according to settings.
+     * Username is not case-sensitive.
+     */
+    function getUserFromUsername<T extends string | string[]>(username: T): T extends string ? Promise<object> : Promise<object[]>;
+
+    /**
      * ✅ Gets a brief overview of a user.
      */
     function getPlayerInfo(userId: number): Promise<PlayerInfo>;
